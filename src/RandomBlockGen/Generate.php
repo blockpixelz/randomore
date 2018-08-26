@@ -12,15 +12,15 @@ use pocketmine\item\Item;
 use pocketmine\event\Listener;
 use pocketmine\level\Level;
 use pocketmine\block\Block;
-use pocketmine\block\Iron;
+use pocketmine\block\IronOre;
 use pocketmine\block\Cobblestone;
-use pocketmine\block\Diamond;
-use pocketmine\block\Emerald;
-use pocketmine\block\Gold;
-use pocketmine\block\Coal;
+use pocketmine\block\DiamondOre;
+use pocketmine\block\EmeraldOre;
+use pocketmine\block\GoldOre;
+use pocketmine\block\CoalOre;
 use pocketmine\block\Lava;
-use pocketmine\block\Lapis;
-use pocketmine\block\Redstone;
+use pocketmine\block\LapisOre;
+use pocketmine\block\RedstoneOre;
 use pocketmine\block\Water;
 
 class Generate extends PluginBase implements Listener{
@@ -45,25 +45,25 @@ class Generate extends PluginBase implements Listener{
                 $id = mt_rand(1, 20);
                 switch ($id) {
                     case 2;
-                        $newBlock = new Iron();
+                        $newBlock = new IronOre();
                         break;
                     case 4;
-                        $newBlock = new Gold();
+                        $newBlock = new GoldOre();
                         break;
                     case 6;
-                        $newBlock = new Emerald();
+                        $newBlock = new EmeraldOre();
                         break;
                     case 8;
-                        $newBlock = new Coal();
+                        $newBlock = new CoalOre();
                         break;
                     case 10;
-                        $newBlock = new Redstone();
+                        $newBlock = new RedstoneOre();
                         break;
                     case 12;
-                        $newBlock = new Diamond();
+                        $newBlock = new DiamondOre();
                         break;
 					case 14;
-                        $newBlock = new Lapis();
+                        $newBlock = new LapisOre();
                         break;	
                     default:
                         $newBlock = new Cobblestone();
